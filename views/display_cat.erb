@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <style> table {style="border-width:1px;border-color:black} </style>
+   <table border="1">
+   <tr><th>ID</th><th>Form Name</th><th>Title</th><th>Short Description</th><th>Category 1</th><th>New Entry</th><th>HTML</th><th>Markdown</th><th>Delete</th></tr>
+<%
+@data.each do |var|
+    if var['category1'] =~/#{@cat}/
+%>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+
+
+   <tr>
+   <% if var['category1'] =~/form/ %>
+   <td><a href="/display?id_val=<%= var['id'] %>"><%= var['id'] %></a></td>
+   <% else %>
+   <td><a href="/display_entry?id_val=<%= var['id'] %>"><%= var['id'] %></a></td>
+   <% end %>
+   <td><%= var['form_name'] %></td>
+   <td><%= var['title'] %></td>
+   <td><%= var['short_desc'] %></td>
+   <td><%= var['category1'] %></td>
+   <% if var['category1'] =~/form/ %>
+   <td><a href="/display?id_val=<%= var['id'] %>">create_entry</a></td>
+   <% else %>
+   <td>-</a></td>
+   <% end %>
+   <td><a href="/edit_entry?id_val=<%= var['id'] %>">edit</a></td>
+   <td><a href="/edit_entry1?id_val=<%= var['id'] %>">md_edit</a></td>
+   <td><a href="/delete_confirm?id_val=<%= var['id'] %>">delete</a></td>
+   </tr>
+    
+  
+<%  
+    end
+end 
+%>
+</table>

@@ -1,0 +1,52 @@
+<html><title>Favorite Athlete</title><body><h1>Favorite Athlete</h1>
+<form action="/form1_out" method="post">
+
+Title: 
+<br>  <input type="text" name="title" /><p/>
+Form Name: 
+<br>  <input type="text" name="form_name" /><p/>
+Short Description: 
+<br>  <input type="text" name="short_desc" /><p/>
+
+Category 1:<p />
+<select name="category1" >
+  <option value="form">Form</option>
+  <option value="athlete">Favorite Atheletes</option>
+  <option value="movies">Favorite Movies</option>
+</select> 
+<p></p>
+Category 2:<p />
+<select name="category2" >
+  <option value="inactive">Inactive</option>
+  <option value="front">Promote to front</option>
+</select>
+<p></p>
+
+<fieldset>
+    <legend>Text Fields:</legend>
+Text1:<br>
+  <input type="hidden" name="text1n" value="Text1" /><input type="text" name="text1" /><p/>
+Text2:<br>
+  <input type="hidden" name="text2n" value="Text2" /><input type="text" name="text2" /><p/>
+Text3:<br>
+  <input type="hidden" name="text3n" value="Text3" /><input type="text" name="text3" /><p/>
+Text4:<br>
+  <input type="hidden" name="text4n"  value="Text4"/><input type="text" name="text4" /><p/>
+Text5:<br>
+  <input type="hidden" name="text5n"  value="Text5" /><input type="text" name="text5" /><p/>
+</fieldset>
+<p />
+
+<fieldset>
+    <legend>File Fields:</legend>   
+File1:<br>
+  <input type="hidden" name="file1n"  value="File1" /><input type="file" name="file1" /><p/>
+File2:<br>
+  <input type="hidden" name="file2n"  value="File2" /><input type="file" name="file2" /><p/>
+</fieldset>
+<p />
+
+<button class="status">Toggle jQTE</button>
+
+<textarea name="content" class="jqte-test"><%= @content %></span></u></b>
+</body></html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<table>
+<tr><td>
+<%
+#@dita = Dita.all(:order => :id.desc)
+#id_val = 2
+#@dita = Dita.all(:category2 => "front")
+@data.each do |var|
+	if var['category2'] =~/front/
+%>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+
+  
+  
+   <div id="menu" style="background-color:WhiteSmoke;width:375px;border:2px solid;border-radius:5px;font-size:12px;">
+   <h3><%= var['category1'].capitalize %></h3>
+   <% if var['text1'].length > 0 %><p><b><%= var['text1n'] %>:</b> <%= var['text1'] %></p><% end %>
+   <% if var['text2'].length > 0 %><p><b><%= var['text2n'] %>:</b> <%= var['text2'] %></p><% end %>
+   <% if var['text3'].length > 0 %><p><b><%= var['text3n'] %>:</b> <%= var['text3'] %></p><% end %>
+   <% if var['text4'].length > 0 %><p><b><%= var['text4n'] %>:</b> <%= var['text4'] %></p><% end %>
+  <% if var['text5'].length > 0 %> <p><b><%= var['text5n'] %>:</b> <%= var['text5'] %></p><% end %>
+   <%= var['content'] %>
+   </div>
+   <p />
+  
+<%  
+	end
+end
+%>
+<!- Start second column -->
+<td>&nbsp;&nbsp;&nbsp;</td></td><td valign=top>
+<!-- div id="menu" style="background-color:WhiteSmoke;height:300px;width:375px;border:2px solid;border-radius:5px;font-size:12px;" -->
+
+<div id="menu" style="background-color:WhiteSmoke;width:325px;border:2px solid;border-radius:5px;font-size:12px;">
+ <h3>Favorite Movies</h3>
+<ol>
+<%
+#@dita = Dita.all(:order => :id.desc)
+#id_val = 2
+#@dita = Dita.all(:category1 => "movies")
+@data.each do |var|
+	if var['category1'] =~/movies/
+%>
+<li><a href="htm/<%= var['form_name'] %>.htm"><%= var['title'] %></a>: <%= var['short_desc'] %></li>
+<% 
+ end 
+end
+%>
+ </ul> </div>
+
+ <div id="menu" style="background-color:WhiteSmoke;width:325px;border:2px solid;border-radius:5px;font-size:12px;">
+ <h3>Content Management</h3>
+<ol>
+<%
+#@dita = Dita.all(:order => :id.desc)
+#id_val = 2
+#@dita = Dita.all(:category1 => "movies")
+@data.each do |var|
+	if var['category1'] =~/cm/
+%>
+<li><a href="edit_entry1?id_val=<%= var['id'] %>"><%= var['title'] %></a>: <%= var['short_desc'] %></li>
+<% 
+ end 
+end
+%>
+ </ul> </div>
+ 
+ 
+ 
+ 
+ 
+
+</td></tr></table>
+
+<br/>
+
+
+<script>
+	$('.jqte-test').jqte();
+	//$(".jqte-test").jqte({color: false});
+	// $(".jqte-test").jqte({b: true});
+	// $(".jqte-test").jqte({b: true});
+	//  $(".jqte-test").jqte({button: "SEND"});
+	
+	
+	// settings of status
+	var jqteStatus = true;
+	$(".status").click(function()
+	{
+		jqteStatus = jqteStatus ? false : true;
+		$('.jqte-test').jqte({"status" : jqteStatus})
+	});
+</script>
+
+<!------------------------------------------------------------ jQUERY TEXT EDITOR ---------

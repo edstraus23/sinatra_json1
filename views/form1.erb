@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<% 
+#@content=" " if @textarea.length == 0
+%>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+
+<h2>Demo | v.1.4.0</h2>
+
+<!------------------------------------------------------------ Toggle jQTE Button ------------------------------------------------------------>
+
+<!------------------------------------------------------------ jQUERY TEXT EDITOR ------------------------------------------------------------>
+<form action="/form1_out" method="post">
+
+Title: 
+<br>&nbsp;&nbsp;<input type="text" name="title" /><p/>
+Form Name: 
+<br>&nbsp;&nbsp;<input type="text" name="form_name" /><p/>
+Short Description: 
+<br>&nbsp;&nbsp;<input type="text" name="short_desc" width="40" /><p/>
+
+Category 1:<p />
+<select name="category1" >
+  <%= @cat_out %>
+</select> 
+<p></p>
+Category 2:<p />
+<select name="category2" >
+   <%= @cat_out2 %>
+  
+</select>
+<p></p>
+
+<fieldset>
+    <legend>Text Fields:</legend>
+Text1:<br>&nbsp;&nbsp;<input type="text" name="text1" /><p/>
+Text2:<br>&nbsp;&nbsp;<input type="text" name="text2" /><p/>
+Text3:<br>&nbsp;&nbsp;<input type="text" name="text3" /><p/>
+Text4:<br>&nbsp;&nbsp;<input type="text" name="text4" /><p/>
+Text5:<br>&nbsp;&nbsp;<input type="text" name="text5" /><p/>
+</fieldset>
+<p />
+
+<fieldset>
+    <legend>File Fields:</legend>   
+File1:<br>
+&nbsp;&nbsp;<input type="hidden" name="file1n"  value="file1" /><input type="file" name="file1" /><p/>
+File2:<br>
+&nbsp;&nbsp;<input type="hidden" name="file2n"  value="file2" /><input type="file" name="file2" /><p/>
+</fieldset>
+<p />
+
+<!-- <button class="status">Toggle jQTE</button> -->
+
+<textarea name="content" class="jqte-test"><%= @content %></span></u></b></textarea>
+<!-- <textarea name="content" rows=5 cols=70><%= @content %></span></u></b></textarea> -->
+
+<!-- <input name="input" type="text" value="<b>My contents are from <u><span style=&quot;color:rgb(0, 148, 133);&quot;>INPUT</span></u></b>" class="jqte-test">
+
+<span name="span" class="jqte-test"><b>My contents are from <u><span style="color:rgb(0, 148, 133);">SPAN</span></u></b></span> -->
+
+<input type="submit">
+
+
+ </form>
+
+<br/>
+<h3>Code Snipets</h3>
+<div id="menu" style="background-color:WhiteSmoke;height:300px;width:675px;border:2px solid;border-radius:5px;font-size:12px;">
+<b>style</b><br />
+&lt;style&gt;
+	table {style="border-width:1px;border-color:black}
+&lt;/style&gt;
+<p/>
+<b>two column table example:</b><br />
+&lt;table border="1"&gt;
+&lt;tr&gt;&lt;th&gt;heading 1&lt;/th&gt;&lt;th&gt;heading 2&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;cell 1&lt;/td&gt;&lt;td&gt;cell 2&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+<p />
+<b>three column table example:</b><br />
+&lt;table border="1"&gt;
+&lt;tr&gt;&lt;th&gt;heading 1&lt;/th&gt;&lt;th&gt;heading 2&lt;/th&gt;&lt;th&gt;heading 3&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;cell 1&lt;/td&gt;&lt;td&gt;cell 2&lt;/td&gt;&lt;td&gt;cell 3&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+<p />
+<b>four column table example:</b><br />
+&lt;table border="1"&gt;
+&lt;tr&gt;&lt;th&gt;heading 1&lt;/th&gt;&lt;th&gt;heading 2&lt;/th&gt;&lt;th&gt;heading 3&lt;/th&gt;&lt;th&gt;heading 4&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;cell 1&lt;/td&gt;&lt;td&gt;cell 2&lt;/td&gt;&lt;td&gt;cell 3&lt;/td&gt;&lt;td&gt;cell 4&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</div>
+
+
+<script>
+	$('.jqte-test').jqte();
+	//$(".jqte-test").jqte({color: false});
+	// $(".jqte-test").jqte({b: true});
+	// $(".jqte-test").jqte({b: true});
+	//  $(".jqte-test").jqte({button: "SEND"});
+	
+	
+	// settings of status
+	var jqteStatus = true;
+	$(".status").click(function()
+	{
+		jqteStatus = jqteStatus ? false : true;
+		$('.jqte-test').jqte({"status" : jqteStatus})
+	});
+</script>
+
+<!------------------------------------------------------------ jQUERY TEXT EDITOR ------------------------------------------------------------>

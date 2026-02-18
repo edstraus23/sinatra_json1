@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <style> table {style="border-width:1px;border-color:black} </style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+
+   <table border="1">
+   <tr><th>ID</th><th>Name</th><th>Messagen</th><th>Edit</th><th>Delete</th></tr>
+<%
+#@dita = Dita.all(:order => :id.desc)
+#id_val = 2
+ @data.each do |var|
+%>
+
+
+   <tr>
+   <td><a href="/display?id_val=<%= var['id'] %>"><%= var['id'] %></a></td>
+   <td><%= var['name'] %></td>
+   <td><%= var['message'] %></td>
+   <td><a href="/edit_entry?id_val=<%= var['id'] %>">edit</a></td>
+   <td><a href="/delete_confirm?id_val=<%= var['id'] %>">delete</a></td>
+   </tr>
+    
+ <% end %>  
+ 
+  
+</table>
+
+
+
+
+
+
+

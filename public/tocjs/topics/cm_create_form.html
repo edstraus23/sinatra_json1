@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2019" />
+<meta name="DC.rights.owner" content="(C) Copyright 2019" />
+<meta name="DC.Type" content="topic" />
+<meta name="DC.Title" content="Creating a Form" />
+<meta name="DC.Relation" scheme="URI" content="../topics/cm_usage.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="creating-a-form" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating a Form</title>
+</head>
+<body id="creating-a-form">
+<h1 class="title topictitle1" id="ariaid-title1">Creating a Form</h1>
+<div class="body"><p class="p">Forms are used to group topics together. These groupings are called categories. For example, you can create a form for your favorite baseball players, which this example will show. There are also the following pre-made forms:</p>
+<ul class="ul"><li class="li"><p class="p">athlete (Favorite Althelete)</p>
+</li>
+<li class="li"><p class="p">movies (Favorite Movies)</p>
+</li>
+<li class="li"><p class="p">recent_movies (Recent Movies)</p>
+</li>
+<li class="li"><p class="p">topicmap (Topicmaps)</p>
+</li>
+<li class="li"><p class="p">bookmap (Bookmaps)</p>
+</li>
+<li class="li"><p class="p">images (Images)</p>
+</li>
+<li class="li"><p class="p">cm (Content Management - this PDF file was generated using this form)</p>
+</li>
+</ul>
+<p class="p">A template has been setup for creating forms. You just need to enter information to identify the form fields. Perform the following steps to create a form:</p>
+<ol class="ol"><li class="li"><p class="p">Select <strong class="ph b">Forms &gt; Enter Forms</strong>.</p>
+</li>
+<li class="li"><p class="p">Enter information to create form and identify the fields. See screen capture below for an example.</p>
+</li>
+<li class="li"><p class="p">Click submit.</p>
+</li>
+<li class="li"><p class="p">To add a form as a category, update the cat_out variable in the cm_app.rb file. See <a class="xref" href="cm_set_variables.html">Setting Variables</a>
+for more information. In this example, add<code class="ph codeph">&lt;option value=\"baseball\"&gt;Favorite Baseball Players&lt;/option&gt;</code> to cm_app.rb file.</p>
+</li>
+</ol>
+<pre class="pre codeblock"><code>cat_out="&lt;option value=\"form\"&gt;Form&lt;/option&gt;
+  &lt;option value=\"athlete\"&gt;Favorite Atheletes&lt;/option&gt;
+  &lt;option value=\"movies\"&gt;Favorite Movies&lt;/option&gt;
+  &lt;option value=\"movies\"&gt;Favorite Movies&lt;/option&gt;
+  &lt;option value=\"recent_movies\"&gt;Recently Viewed Movies&lt;/option&gt;
+  &lt;option value=\"topicmap\"&gt;Topicmap&lt;/option&gt;
+  &lt;option value=\"bookmap\"&gt;Bookmap&lt;/option&gt;
+    &lt;option value=\"images\"&gt;Images&lt;/option&gt;
+  &lt;option value=\"cm\"&gt;Content Management&lt;/option&gt;
+  &lt;option value=\"misc\"&gt;Misc&lt;/option&gt;
+  &lt;option value=\"baseball\"&gt;Favorite Baseball Players&lt;/option&gt;"</code></pre><div class="fig fignone"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Create Form</span><img class="image" src="images/Screenshot_create_form.png" alt="create_form" /><br /></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/cm_usage.html">Usage</a></div>
+</div>
+</div></body>
+</html>

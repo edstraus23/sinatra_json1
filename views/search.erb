@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+
+ <h3><%= @title %></h3>
+   
+  <form action="/search_out" name="form1" method="post">
+  
+
+ <table>  
+ 
+  <tr><td>  Search Category:</td><td>
+<select name="search_cat" >
+  <%= @cat_out3 %>
+</select> 
+</td><td>Search Entry:</td><td><input type="text" name="search_string" /></td></tr>
+ 
+
+ </table>
+  
+  
+   <input type="submit" value="Submit">
+  
+   </form>

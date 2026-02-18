@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<%
+@data.reject! do |entry|
+  entry['id'] == @id_val
+end
+
+# Write the updated data back to the file
+  File.write(JSON_FILE_PATH, JSON.pretty_generate(@data))
+redirect '/'
+%>
+
+
+
+
+

@@ -1,0 +1,32 @@
+<html><title>Running Ant</title><body><h1>Running Ant</h1>
+<pre>
+eric@eric-desktop:~/DITA-OT1.8$ ant -f build_demo.xml
+Buildfile: /home/eric/DITA-OT1.8/build_demo.xml
+
+prompt.init:
+
+prompt:
+     [echo] Please enter the filename for the DITA map that you
+     [echo] want to build including the directory path (if any).
+     [echo] The filename must have the .ditamap extension.
+     [echo] Note that relative paths that climb (..) are not supported yet.
+     [echo] To build the sample, press return without entering anything.
+    [input] The DITA map filename:  [/home/eric/DITA-OT1.8/samples/hierarchy.ditamap]
+/home/eric/DITA-OT1.8/samples/topic_map_dita.ditamap
+     [echo]
+     [echo] Please enter the name of the output directory or press return
+     [echo] to accept the default.
+    [input] The output directory (out):  [out]
+
+     [echo]
+     [echo] Please enter the type of output to generate.
+     [echo] Options include: eclipse, tocjs, htmlhelp, javahelp, pdf, or web
+     [echo] Use lowercase letters.
+     [echo]        
+    [input] The output type:  (eclipse, tocjs, htmlhelp, javahelp, pdf, [web], docbook)
+tocjs
+     [echo]
+     [echo] Ready to build /home/eric/DITA-OT1.8/samples/topic_map_dita.ditamap
+     [echo] for tocjs in out
+</pre>
+</body></html>

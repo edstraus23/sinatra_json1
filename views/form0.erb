@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+
+<%
+      id=0
+      @data.each do |item|
+    %>
+ <!-- <pre> <%= item['name'] %>  <%= item['message'] %> </pre> -->
+    <%
+     id=item['id'].to_i
+     end
+     id = id + 1
+   %>
+
+ <!-- <p> <pre> <%= id %> </pre> </p> -->
+
+  <h2>Demo | v.1.4.0</h2>
+
+   
+  <form action="/form0_out" name="form0" method="post">
+ <input type="hidden" name="id_val" value=<%= id %> />
+  
+
+ <table>  
+ 
+ <tr><td>Form name:</td><td><input type="text" name="form_name" value=""/></td></tr>
+ <tr><td>Title:</td><td><input type="text" name="title" value=""/></td></tr>
+ <tr><td>Short Description:</td><td><input type="text" name="short_desc" value=""/></td></tr>
+ <!-- <tr><td>text1:</td><td><input type="text" name="text1" value="" /></td></tr> -->
+ <tr><td>text1n:</td><td><input type="text" name="text1n" value="" /></td></tr>
+ <!-- <tr><td>text2:</td><td><input type="text" name="text2" value="" /></td></tr> -->
+ <tr><td>text2n:</td><td><input type="text" name="text2n" value="" /></td></tr>
+ <!-- <tr><td>text3:</td><td><input type="text" name="text3" value="" /></td></tr> -->
+  <tr><td>text3n:</td><td><input type="text" name="text3n" value="" /></td></tr>
+ <!-- <tr><td>text4:</td><td><input type="text" name="text4" value="" /></td></tr> -->
+ <tr><td>text4n:</td><td><input type="text" name="text4n" value="" /></td></tr>
+ <!-- <tr><td>text5:</td><td><input type="text" name="text5" value="" /></td></tr> -->
+ <tr><td>text5n:</td><td><input type="text" name="text5n" value="" /></td></tr>
+
+ 
+ <!-- <tr><td>file1:</td><td><input type="text" name="file1" value="" /></td></tr> -->
+ <tr><td>file1n:</td><td><input type="text" name="file1n" value="" /></td></tr>
+<!-- <tr><td>file2:</td><td><input type="text" name="file2" value="" /></td></tr> -->
+ <tr><td>file2n:</td><td><input type="text" name="file2n" value="" /></td></tr>
+ 
+ <tr><td>  Category 1:</td><td>
+<select name="category1" id="category1" >
+  <%= @cat_out %>
+</select> 
+</td></tr>
+<tr><td>
+Category 2:</td><td>
+<select name="category2" id="category2">
+  <%= @cat_out2 %>
+</select>
+</td></tr>
+ </table>
+ 
+  <input type="submit">
+
+
+
+   </form>
+
+
+<br/>
+
+
+
+<script>
+	$('.jqte-test').jqte();
+	//$(".jqte-test").jqte({color: false});
+	// $(".jqte-test").jqte({b: true});
+	// $(".jqte-test").jqte({b: true});
+	//  $(".jqte-test").jqte({button: "SEND"});
+	
+	
+	// settings of status
+	var jqteStatus = true;
+	$(".status").click(function()
+	{
+		jqteStatus = jqteStatus ? false : true;
+		$('.jqte-test').jqte({"status" : jqteStatus})
+	});
+</script>
+
+<!------------------------------------------------------------ jQUERY TEXT EDITOR ------------------------------------------------------------>
+
+
+

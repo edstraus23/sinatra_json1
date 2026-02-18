@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Return file directory</title>
+<script language="JavaScript">
+ function GetDirectory() {
+  strFile = document.MyForm.MyFile.value;
+  intPos = strFile.lastIndexOf("\\");
+  strDirectory = strFile.substring(0, intPos);
+  alert(strFile + '\n\n' + strDirectory);
+  return false;
+ }
+</script>
+</head>
+<body>
+<form name="MyForm">
+<input type="file" name="MyFile">
+<input type="button" value="Get directory" onClick="GetDirectory();">
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sinatra JSON Form</title>
+</head>
+<body>
+    <%
+      id=0
+      @data.each do |item|
+    %>
+  <pre> <%= item['name'] %>  <%= item['message'] %> </pre>
+    <%
+     id=item['id'].to_i
+     end
+     id = id + 1
+   %>
+  <pre> <%= id  %> </pre>
+    <h1>Submit Data to JSON File</h1>
+    <form action="/submit" method="POST">
+      <input type="hidden" id="id" name="id" value=<%= id %>  >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Current Data</h2>
+    <pre><%= JSON.pretty_generate(@data) %></pre>
+</body>
+</html>
+

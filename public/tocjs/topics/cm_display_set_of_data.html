@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2019" />
+<meta name="DC.rights.owner" content="(C) Copyright 2019" />
+<meta name="DC.Type" content="topic" />
+<meta name="DC.Title" content="Displaying Set of Data" />
+<meta name="DC.Relation" scheme="URI" content="../topics/cm_setup.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="displaying-set-of-data" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Displaying Set of Data</title>
+</head>
+<body id="displaying-set-of-data">
+<h1 class="title topictitle1" id="ariaid-title1">Displaying Set of Data</h1>
+<div class="body"><p class="p">The Home page is divided into two columns. The first column shows topics that are tagged promote to front. The second columns shows topics associated with a category in list form.</p>
+<div class="fig fignone"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Home Page</span><img class="image" src="images/home.png" alt="Home Page" /><br /></div>
+<p class="p">Add the following code to the <em class="ph i">display_front.erb</em> view to view all of the topics associated with a category (in this case <em class="ph i">Favorite Movies</em>):</p>
+<pre class="pre codeblock"><code>&lt;div id="menu" style="background-color:WhiteSmoke;width:325px;border:2px solid;border-radius:5px;font-size:12px;"&gt;
+ &lt;h3&gt;Favorite Movies&lt;/h3&gt;
+&lt;ol&gt;
+&lt;%
+#@dita = Dita.all(:order =&gt; :id.desc)
+#id_val = 2
+@dita = Dita.all(:category1 =&gt; "movies")
+@dita.each do |var|
+%&gt;
+&lt;li&gt;&lt;a href="display_entry?id_val=&lt;%= var.id %&gt;"&gt;&lt;%= var.title %&gt;&lt;/a&gt;: &lt;%= var.short_desc %&gt;&lt;/li&gt;
+&lt;% end %&gt;
+ &lt;/ul&gt; &lt;/div&gt;</code></pre></div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/cm_setup.html">Setup</a></div>
+</div>
+</div></body>
+</html>

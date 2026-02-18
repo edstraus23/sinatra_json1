@@ -1,0 +1,10 @@
+[
+  {
+    "sinatra_dir": "/home/eric/dev/sinatra_json1",
+    "ditaot_dir": "/home/eric/dita-ot-3.6/docsrc",
+    "java_dir": "/usr/lib/jvm/java-1.21.0-openjdk-amd64",
+    "cat_out": "<option value='form'>Form</option>\n <option value='topicmap'>Topicmap</option>\n <option value='bookmap'>Bookmap</option>\n <option value='images'>Images</option> \n<option value='cm'>Content Management</option>\n <option value='misc'>Misc</option>\n <option value='athlete'>Favorite Atheletes</option>\n <option value='movies'>Favorite Movies</option>\n <option value='recent_movies'>Recently Viewed Movies</option>\n <option value='baseball'>Favorite Baseball Players</option>",
+    "cat_out2": "<option value='inactive'>Inactive</option>\n <option value='front'>Promote to front</option>",
+    "cat_out3": "<option value='title'>Title</option>\n <option value='content'>Content</option>\n <option value='cat_1'>Category 1</option>\n <option value='cat_2'>Category 2</option>"
+  }
+]

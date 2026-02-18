@@ -1,0 +1,36 @@
+<%
+#@dita = Dita.all(:order => :id.desc)
+#id_val = 2
+#@dita = Dita.all(:id => @id_val)
+flag = 0
+@data.each do |var|
+%>
+
+
+
+<% if var['id'] == @id_val %>
+<table>
+<tr><td><b>Form Name:</b></td><td><%= var['form_name'] %></td></tr>
+<tr><td><b>Title:</b></td><td><%= var['title'] %></td></tr>
+<tr><td><b>Short Description:</b></td><td><%= var['short_desc'] %></td></tr>
+<tr><td><b>Category 1:</b></td><td><%= var['category1'] %></td></tr>
+<tr><td><b>Category 2:</b></td><td><%= var['category2'] %></td></tr>
+</table>
+<p />
+
+	<p>Are you sure you want to delete the following note: <em>"<%= var['name'] %>"</em>?</p>
+	<form action="/delete_entry?id_val=<%= @id_val %>" method="post">
+		<input type="submit" value="Yes, Delete It!">
+		<a href="/">Cancel</a>
+	</form>
+	
+<% 
+
+flag = 1
+ end 
+
+end %>
+
+<% if flag == 0 %>
+<p>Entry not found</p>
+<% end %>

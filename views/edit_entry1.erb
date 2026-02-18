@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<%
+#@dita = Dita.all(:order => :id.desc)
+#id_val = 2
+
+@data.each do |var|
+
+    if var['id'] == @id_val
+%>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+
+  
+   <h3><%= var['title'] %></h3>
+   <p><%= var['short_desc'] %></p>
+  <form action="/form3_out" name="<%= var['form_name'] %>" method="post">
+ 
+  <input type="hidden" name="id_val" value="<%= var['id'] %>" />
+ 
+
+ <table>  
+ <tr><td>Form name:</td><td><input type="text" name="form_name" value="<%= var['form_name'] %>"/></td><td></td></tr>
+ <tr><td>Title:</td><td><input type="text" name="title" value="<%= var['title'] %>"/></td><td></td></tr>
+ <tr><td>Short Description:</td><td><input type="text" name="short_desc" value="<%= var['short_desc'] %>"/></td><td></td></tr>
+ <tr><td>text1n:</td><td><input type="text" name="text1n" value="<%= var['text1n'] %>" /></td></tr>
+ <tr><td>text1:</td><td></td><td><input type="text" name="text1" value="<%= var['text1'] %>" /></td></tr>
+  <tr><td>text2n:</td><td><input type="text" name="text2n" value="<%= var['text2n'] %>" /></td></tr>
+  <tr><td>text2:</td><td></td><td><input type="text" name="text2" value="<%= var['text2'] %>" /></td></tr>
+ <tr><td>text3n:</td><td><input type="text" name="text3n" value="<%= var['text3n'] %>" /></td></tr>
+ <tr><td>text3:</td><td></td><td><input type="text" name="text3" value="<%= var['text3'] %>" /></td></tr>
+ <tr><td>text4n:</td><td><input type="text" name="text4n" value="<%= var['text4n'] %>" /></td></tr>
+ <tr><td>text4:</td><td></td><td><input type="text" name="text4" value="<%= var['text4'] %>" /></td></tr>
+ <tr><td>text5n:</td><td><input type="text" name="text5n" value="<%= var['text5n'] %>" /></td></tr>
+ <tr><td>text5:</td><td></td><td><input type="text" name="text5" value="<%= var['text5'] %>" /></td></tr>
+ 
+
+  <tr><td>file1n:</td><td><input type="text" name="file1n" value="<%= var['file1n'] %>" /></td></tr>
+ <tr><td>file1:</td><td></td><td><input type="text" name="file1" value="<%= var['file1'] %>" /></td></tr>
+<tr><td>file2n:</td><td><input type="text" name="file2n" value="<%= var['file2n'] %>" /></td></tr>
+<tr><td>file2:</td><td></td><td><input type="text" name="file2" value="<%= var['file2'] %>" /></td></tr>
+ 
+ 
+ <tr><td>  Category 1:</td><td>
+<select name="category1" >
+  <option value="<%= var['category1'] %>"><%= var['category1'] %></option>
+  <%= @cat_out %>
+</select> 
+</td></tr>
+<tr><td>
+Category 2:</td><td>
+<select name="category2" >
+  <option value="<%= var['category2'] %>"><%= var['category2'] %></option>
+  <%= @cat_out2 %>
+</select>
+</td></tr>
+ </table>
+  
+    <!-- <textarea name="content" class="jqte-test"><%= var['content'] %></textarea> -->
+  <textarea name="content" rows=25 cols=70><%= var['content'] %></textarea>
+   <p><input type="submit" value="Submit"></p>
+   </form>
+<%  
+ end
+end
+%>
+
+<br/>
+<h3>Code Snipets</h3>
+<div id="menu" style="background-color:WhiteSmoke;width:675px;border:2px solid;border-radius:5px;font-size:12px;">
+<b>headings</b><br />
+<pre># Topic title
+
+## Nested topic title
+
+# Topic title {#carrot .juice}
+
+
+# Task {.task}
+
+Context
+
+1.  Command
+
+    Info.
+    
+    
+    # Topic title
+
+## Section title {.section}
+
+## Example title {.example}</pre>
+<p/>
+<b>links</b>
+<pre>[Markdown](test.md)
+[DITA](test.dita)
+[HTML](test.html)
+[External](http://www.example.com/test.html)</pre>
+<p/>
+<b>image</b><br />
+<pre>An inline ![Alt](test.jpg).
+
+![Alt](test.jpg)
+
+![Alt](test.jpg "Title")</pre>
+<p />
+<b>table</b><br />
+<pre>| First Header | Second Header | Third Header |
+| ------------ | :-----------: | -----------: |
+| Content      | *Long Cell*                 ||
+| Content      | **Cell**      | Cell         |
+[table title]
+</pre>
+<b>lists</b>
+<pre>*   one
+*   two
+    -   three
+    -   four
+    
+1.  one
+2.  two
+    #.  three
+    #.  four
+    
+ </pre>
+<p />
+<b>inline</b>
+<pre>**bold**
+*italic*
+`code`
+~~strikethrough~~</pre>
+<p/>
+<b>code</b>
+<pre>```
+code 1
+code 2
+```</pre>
+
+
+<b>topicmap example:</b><br />
+&lt;map&gt;<br>&nbsp;&nbsp;&nbsp; &lt;title&gt;DITA work at OASIS&lt;/title&gt;
+<br>&nbsp;&nbsp;&nbsp; &lt;topicref href="oasis-dita-technical-committees.md" format="markdown"&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;topicref href="dita_technical_committee.md" format="markdown"/&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;topicref href="dita_adoption_technical_committee.md" format="markdown" /&gt;
+<br>&nbsp;&nbsp;&nbsp; &lt;/topicref&gt;
+<br>&nbsp;&nbsp;&nbsp; &lt;mapref href"oasis-processes.ditamap"/&gt;<br>&lt;/map&gt;
+
+<p />
+<b>bookmap example:</b><br />
+&lt;bookmap id="taskbook"&gt;<br />
+&lt;booktitle&gt;<br />
+&lt;booklibrary&gt;Retro Tools&lt;/booklibrary&gt;<br />
+&lt;mainbooktitle&gt;Product tasks&lt;/mainbooktitle&gt;<br />
+&lt;booktitlealt&gt;Tasks and what they can do&lt;/booktitlealt&gt;&lt;/booktitle&gt;<br />
+&lt;frontmatter&gt;<br />
+&lt;booklists>&lt;toc/&gt;&lt;/booklists&gt;<br /> 
+&lt;notices href="taskbook/notices.dita"&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;topicref href="taskbook/trademarks.md" format="markdown"&gt;&lt;/topicref&gt;<br />
+&lt;/notices&gt;<br />
+&lt;/frontmatter&gt;<br />
+&lt;chapter href="taskbook/installing.md" format="markdown"&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;topicref href="taskbook/installstorage.md" format="markdown"&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/topicref&gt;<br />
+&lt;/chapter&gt;<br />
+&lt;appendix href="taskbook/task_appendix.md" format="markdown"&gt;&lt;/appendix&gt;<br />
+&lt;/bookmap&gt;<br />
+</div>
+
+
+
+<script>
+	$('.jqte-test').jqte();
+	//$(".jqte-test").jqte({color: false});
+	// $(".jqte-test").jqte({b: true});
+	// $(".jqte-test").jqte({b: true});
+	//  $(".jqte-test").jqte({button: "SEND"});
+	
+	
+	// settings of status
+	var jqteStatus = true;
+	$(".status").click(function()
+	{
+		jqteStatus = jqteStatus ? false : true;
+		$('.jqte-test').jqte({"status" : jqteStatus})
+	});
+</script>
+
+<!------------------------------------------------------------ jQUERY TEXT EDITOR ------------------------------------------------------------>
+
+
+
+

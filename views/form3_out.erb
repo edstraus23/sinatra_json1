@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+
+
+<p>Write the following to the Data store.</p>
+
+<p><%= @id_val %> </p>
+
+<p><%= @title %> </p>
+<p><%= @form_name %> </p>
+<p><%= @short_desc %> </p>
+<p><%= @text1n %> </p>
+<p><%= @text2n %> </p>
+<p><%= @text3n %> </p>
+<p><%= @text4n %> </p>
+<p><%= @text5n %>  </p>
+<p><%= @file1n %> </p>
+<p><%= @file2n %> </p>
+<p><%= @text1 %> </p>
+<p><%= @text2 %> </p>
+<p><%= @text3 %> </p>
+<p><%= @text4 %> </p>
+<p><%= @text5 %>  </p>
+<p><%= @file1 %> </p>
+<p><%= @file2 %> </p>
+<p><%= @category1 %> </p>
+<p><%= @category2 %> </p>
+
+<%
+@data.each do |var|
+    if var['id'] == @id_val
+    #var['id'] = "@id_val",
+    var['form_name'] = @form_name
+    var['title'] = @title
+    var['short_desc'] = @short_desc
+    var['text1n'] = @text1n
+    var['text2n'] = @text2n
+    var['text3n'] = @text3n
+    var['text4n'] = @text4n
+    var['text5n'] = @text5n
+    var['file1n'] = @file1n
+    var['file2n'] = @file2n
+    var['text1'] = @text1
+    var['text2'] = @text2
+    var['text3'] = @text3
+    var['text4'] = @text4
+    var['text5'] = @text5
+    var['file1'] = @file1
+    var['file2'] = @file2
+    var['category1'] = @category1
+    var['category2'] = @category2
+    var['content'] = @content
+    end
+  end
+  # Write the updated data back to the file
+  File.write(JSON_FILE_PATH, JSON.pretty_generate(@data))
+
+
+ # Create a new file and write to it  
+	if @category1 =~/topicmap/
+	
+	aFile = File.new("#{@ditaot_dir}/samples/#{@form_name}.ditamap", "w")
+	
+        aFile.print "<?xml version='1.0' encoding='UTF-8'?><!DOCTYPE map PUBLIC \"-//OASIS//DTD DITA Map//EN\" \"../dtd/technicalContent/dtd/map.dtd\" []>\n"
+    aFile.print "#{@content}\n"
+    aFile.close
+       elsif (@category1 =~/bookmap/)
+        aFile = File.new("#{@ditaot_dir}/samples/#{@form_name}.ditamap", "w")
+        # @content.gsub!(/\(/, "\<")
+       
+       aFile.print "<?xml version='1.0' encoding='utf-8'?><!DOCTYPE bookmap PUBLIC \"-//OASIS//DTD DITA BookMap//EN\" \"../dtd/bookmap/dtd/bookmap.dtd\">\n"
+    aFile.print "#{@content}\n"
+    aFile.close
+
+	else
+    aFile = File.new("#{@ditaot_dir}/samples/topics/#{@form_name}.md", "w")
+    aFile.print "\# #{@title}\n"
+    aFile.print "#{@content}\n"
+    # aFile.print "</body></html>"
+    aFile.close
+    end
+%>
+
+<a href="/display_all">Display All</a>

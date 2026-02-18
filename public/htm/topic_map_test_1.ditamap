@@ -1,0 +1,8 @@
+<map>
+    <title>DITA work at OASIS</title>
+    <topicref href="oasis-dita-technical-committees.dita">
+          <topicref href="dita_technical_committee.dita" />
+          <topicref href="dita_adoption_technical_committee.dita" />
+    </topicref>
+    <mapref href"oasis-processes.ditamap" />
+</map>
