@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2026" />
+<meta name="DC.rights.owner" content="(C) Copyright 2026" />
+<meta name="generator" content="DITA-OT" /><meta name="DC.type" content="topic" />
+<meta name="DC.title" content="Creating a Bookmap/TopicMap - Markdown" />
+<meta name="DC.relation" scheme="URI" content="../topics/cm_usage.html" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="creating-a-bookmaptopicmap---markdown" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating a Bookmap/TopicMap - Markdown</title>
+</head>
+<body id="creating-a-bookmaptopicmap---markdown">
+<h1 class="title topictitle1" id="ariaid-title1">Creating a Bookmap/TopicMap - Markdown</h1>
+<div class="body"><ol class="ol"><li class="li"><p class="p">Create an entry using the same steps as outlined in the Creating Entries using HTML coding.</p>
+</li>
+<li class="li"><p class="p">Select topicmap or bookmap for Category 1.</p>
+</li>
+</ol>
+<p class="p">3, Enter the bookmap or topicmap coding as shown in the sample code:</p>
+<p class="p"><strong class="ph b">topicmap example:</strong></p>
+<pre class="pre codeblock"><code>&lt; map&gt;
+&lt;title&gt;DITA work at OASIS&lt;/title&gt; 
+&lt;topicref href="oasis-dita-technical-committees.md" format="markdown"&gt; 
+&lt;topicref href="dita_technical_committee.md" format="markdown"/&gt; 
+&lt;topicref href="dita_adoption_technical_committee.md" format="markdown" /&gt; 
+&lt;/topicref&gt; 
+&lt;mapref href"oasis-processes.ditamap"/&gt;
+&lt;/map&gt; </code></pre><p class="p"><strong class="ph b">bookmap example:</strong></p>
+<pre class="pre codeblock"><code>&lt; bookmap id="taskbook"&gt;
+&lt; booktitle&gt;
+&lt; booklibrary&gt;Retro Tools&lt;/booklibrary&gt;
+&lt; mainbooktitle&gt;Product tasks&lt;/mainbooktitle&gt;
+&lt; booktitlealt&gt;Tasks and what they can do&lt;/booktitlealt&gt;&lt;/booktitle&gt;
+&lt; frontmatter&gt;
+&lt; booklists&gt;&lt;toc/&gt;&lt;/booklists&gt;
+&lt;notices href="taskbook/notices.dita"&gt;
+&lt;topicref href="taskbook/trademarks.md" format="markdown"&gt;&lt;/topicref&gt;
+&lt; /notices&gt;
+&lt; /frontmatter&gt;
+&lt; chapter href="taskbook/installing.md" format="markdown"&gt;
+&lt;topicref href="taskbook/installstorage.md" format="markdown"&gt;
+&lt;/topicref&gt;
+&lt; /chapter&gt;
+&lt; appendix href="taskbook/task_appendix.md" format="markdown"&gt;&lt;/appendix&gt;
+&lt; /bookmap&gt;</code></pre><ol class="ol"><li class="li"><p class="p">Click submit.</p>
+</li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/cm_usage.html">Usage</a></div>
+</div>
+</div></body>
+</html>

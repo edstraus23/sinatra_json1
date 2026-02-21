@@ -6,9 +6,7 @@ There are two modes for creating maps and topics with this system:
 - HTML - Uses jQuery TE HTML editor and converts HTML into DITA.
 - Markdown - Uses markdown language with DITA OT.
 
-**Note:** The documentation for this project is very preliminary. I plan on updating the documentation in the near future.
-
-You can find preliminary instructions in the **docs** folder of this project (both in PDF and HTML formats).
+You can find instructions in the **docs** folder of this project (both in PDF and HTML formats).
 
 ## Required Software
 
