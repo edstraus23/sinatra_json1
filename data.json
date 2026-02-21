@@ -89,7 +89,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "The Sintara web-based content management system (SWCMS) was created to make list generation and content management easy. This user guide describes how to install and use the SWCMS. It also describes the required software and documents how to run DITA Open Tool Kit.\r\n\r\n\r\n**Note:** This PDF file was created using the SWCMS application."
+    "content": "The Sintara web-based content management system (SWCMS) was created to make list generation and content management easy. This user guide describes how to install and use the SWCMS. It also describes the required software and documents how to run DITA Open Tool Kit.\r\n\r\nThis iteration of the CMS now uses json files to store form data instead of datamapper, which has been deprecated.\r\n\r\n\r\n**Note:** This PDF file was created using the SWCMS application."
   },
   {
     "id": "8",
@@ -112,7 +112,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "To install the SWCMS, use a program, like Winzip or 7-zip, to unzip the following file:\r\n\r\nsinatra_md.zip\r\n\r\n\r\nUnzipping the file will create a sinatra_md directory. The sinatra_md directory contains the following files at the top-level:\r\n\r\n* cm_app.rb - The main sintara ruby application. Starts up the sintara web application and access the datamapper database application.\r\n* recall.db - Pre-populated database used with the datamapper application.\r\n\r\nThere are also three directories at the top-level:\r\n\r\n* h2d - This directory contains file for an XSL transform that converts html files into dita.\r\n\r\n* public - This directory allows you to post HTML files on the Sinatra web application.\r\n\r\n* views - This folder contains the ERB views. See [http://sinatrarb.com/intro.html](http://sinatrarb.com/intro.html) for more details.\r\n\r\nAfter creating the Sinatra_md directory, go to the [Setup](cm_setup.md) chapter to configure the SWCMS."
+    "content": "To install the SWCMS, go [https://github.com/edstraus23/sinatra_json1/](https://github.com/edstraus23/sinatra_json1/)\r\n\r\nClick on **Code > Download Zip**.\r\n\r\nor use a command like the following to clone the repository:\r\n\r\n```\r\ngh repo clone edstraus23/sinatra_json1\r\n```\r\n\r\nUnzipping the file will create a sinatra_json1 directory. The sinatra_json1 directory contains the following files at the top-level:\r\n\r\n* cm_app.rb - The main sintara ruby application. Starts up the sintara web application and accesses the json file.\r\n\r\n\r\nThere are also three directories at the top-level:\r\n\r\n* h2d - This directory contains file for an XSL transform that converts html files into dita.\r\n\r\n* public - This directory allows you to post HTML files on the Sinatra web application.\r\n\r\n* views - This folder contains the ERB views. See [http://sinatrarb.com/intro.html](http://sinatrarb.com/intro.html) for more details.\r\n\r\nAfter creating the Sinatra_json1 directory, go to the [Setup](cm_setup.md) chapter to configure the SWCMS."
   },
   {
     "id": "9",
@@ -135,7 +135,7 @@
     "file2": "",
     "category1": "bookmap",
     "category2": "inactive",
-    "content": "<bookmap id=\"ditacms\">\r\n<booktitle>\r\n<booklibrary>Ruby Sinatra</booklibrary>\r\n<mainbooktitle>Sinatra Web-Based CMS</mainbooktitle>\r\n<booktitlealt>By: Eric Strausbaugh</booktitlealt></booktitle>\r\n<frontmatter>\r\n<booklists><toc/></booklists>\r\n</frontmatter>\r\n<chapter href=\"topics/cm_intro.md\" format=\"markdown\">\r\n <topicref href=\"topics/cm_feature.md\" format=\"markdown\"></topicref>\r\n<topicref href=\"topics/cm_required_software.md\" format=\"markdown\">\r\n   <topicref href=\"topics/cm_TE.md\" format=\"markdown\"></topicref>\r\n   <topicref href=\"topics/cm_ruby.md\" format=\"markdown\">\r\n        <topicref href=\"topics/cm_sinatra.md\" format=\"markdown\"></topicref>\r\n        <topicref href=\"topics/cm_datamapper.md\" format=\"markdown\"></topicref>\r\n   </topicref>\r\n   <topicref href=\"topics/cm_DITA_OT.md\" format=\"markdown\"></topicref>\r\n</topicref>\r\n</chapter>\r\n<chapter href=\"topics/cm_install.md\" format=\"markdown\">\r\n</chapter>\r\n<chapter href=\"topics/cm_setup.md\" format=\"markdown\">\r\n  <topicref href=\"topics/cm_set_variables.md\" format=\"markdown\"></topicref>\r\n <topicref href=\"topics/cm_display_set_of_data.md\" format=\"markdown\"></topicref>\r\n</chapter>\r\n<chapter href=\"topics/cm_usage.md\" format=\"markdown\">\r\n  <topicref href=\"topics/cm_run_swcms.md\" format=\"markdown\"></topicref>\r\n   <topicref href=\"topics/cm_create_form.md\" format=\"markdown\"></topicref>\r\n  <topicref href=\"topics/cm_create_entries.md\" format=\"markdown\"></topicref>\r\n  <topicref href=\"topics/cm_create_map_html.md\" format=\"markdown\"></topicref>\r\n  <topicref href=\"topics/cm_create_maps.md\" format=\"markdown\"></topicref>\r\n <topicref href=\"topics/cm_run_dita_3_0.md\" format=\"markdown\"></topicref>\r\n</chapter>\r\n<appendix href=\"topics/cm_html_snip.md\" format=\"markdown\"></appendix>\r\n<appendix href=\"topics/cm_md_snip.md\" format=\"markdown\"></appendix>\r\n</bookmap>"
+    "content": "<bookmap id=\"ditacms\">\r\n<booktitle>\r\n<booklibrary>Ruby Sinatra</booklibrary>\r\n<mainbooktitle>Sinatra Web-Based CMS</mainbooktitle>\r\n<booktitlealt>By: Eric Strausbaugh</booktitlealt></booktitle>\r\n<frontmatter>\r\n<booklists><toc/></booklists>\r\n</frontmatter>\r\n<chapter href=\"topics/cm_intro.md\" format=\"markdown\">\r\n <topicref href=\"topics/cm_feature.md\" format=\"markdown\"></topicref>\r\n<topicref href=\"topics/cm_required_software.md\" format=\"markdown\">\r\n   <topicref href=\"topics/cm_TE.md\" format=\"markdown\"></topicref>\r\n   <topicref href=\"topics/cm_ruby.md\" format=\"markdown\">\r\n        <topicref href=\"topics/cm_sinatra.md\" format=\"markdown\"></topicref>\r\n        <topicref href=\"topics/cm_json.md\" format=\"markdown\"></topicref>\r\n   </topicref>\r\n   <topicref href=\"topics/cm_DITA_OT.md\" format=\"markdown\"></topicref>\r\n</topicref>\r\n</chapter>\r\n<chapter href=\"topics/cm_install.md\" format=\"markdown\">\r\n</chapter>\r\n<chapter href=\"topics/cm_setup.md\" format=\"markdown\">\r\n  <topicref href=\"topics/cm_set_variables.md\" format=\"markdown\"></topicref>\r\n <topicref href=\"topics/cm_display_set_of_data.md\" format=\"markdown\"></topicref>\r\n</chapter>\r\n<chapter href=\"topics/cm_usage.md\" format=\"markdown\">\r\n  <topicref href=\"topics/cm_run_swcms.md\" format=\"markdown\"></topicref>\r\n   <topicref href=\"topics/cm_create_form.md\" format=\"markdown\"></topicref>\r\n  <topicref href=\"topics/cm_create_entries.md\" format=\"markdown\"></topicref>\r\n  <topicref href=\"topics/cm_create_map_html.md\" format=\"markdown\"></topicref>\r\n  <topicref href=\"topics/cm_create_maps.md\" format=\"markdown\"></topicref>\r\n <topicref href=\"topics/cm_run_dita_3_0.md\" format=\"markdown\"></topicref>\r\n<topicref href=\"topics/cm_search.md\" format=\"markdown\"></topicref>\r\n</chapter>\r\n<appendix href=\"topics/cm_html_snip.md\" format=\"markdown\"></appendix>\r\n<appendix href=\"topics/cm_md_snip.md\" format=\"markdown\"></appendix>\r\n</bookmap>"
   },
   {
     "id": "10",
@@ -158,7 +158,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "The content management application has the following features:\r\n* Web-based content management system\r\n* Configurationable forms to enter contents\r\n* WYSIWYG editing window\r\n* RSS-like feeds for list of things (like favorites movies, music, etc.)\r\n* Output xml files in DITA compatible format\r\n* Search capabilities (to be added later)"
+    "content": "The content management application has the following features:\r\n* Web-based content management system\r\n* Configurationable forms to enter contents\r\n* WYSIWYG editing window\r\n* RSS-like feeds for list of things (like favorites movies, music, etc.)\r\n* Output xml files in DITA compatible format\r\n* Search capabilities "
   },
   {
     "id": "11",
@@ -204,7 +204,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "The following software is required to run the content management application:\r\n* jQuery TE - Used as a WYSIWYG HTML editor.\r\n* Ruby\r\n  - Sinatra - Used for quickly creating web applications in Ruby.\r\n  - Datamapper - Used as the database\r\n  - erb - Used for creating a Framework for the pages of web application\r\n* DITA OT - Used to output the contents in different formats (xhtml, PDF, PDF2, etc.). This implementation allows the use of markdown language."
+    "content": "The following software is required to run the content management application:\r\n* jQuery TE - Used as a WYSIWYG HTML editor.\r\n* Ruby\r\n  - Sinatra - Used for quickly creating web applications in Ruby.\r\n  - Json - Used as the format to store information from forms.\r\n  - erb - Used for creating a Framework for the pages of web application\r\n* DITA OT - Used to output the contents in different formats (xhtml, PDF, PDF2, etc.). This implementation allows the use of markdown language."
   },
   {
     "id": "13",
@@ -319,7 +319,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "DITA Open Toolkit is an open-source publishing engine for DITA xml contents.\r\n\r\n* [www.dita-ot.org](http://www.dita-ot.org/)\r\n\r\nYou must DITA-OT 3 or later so you can use markdown language.\r\n\r\n Version| Description| \r\n| ------------ | :-----------: | \r\n| dita-ot-3.6.0     | This is a development version. |\r\n[DITA OT Version]"
+    "content": "DITA Open Toolkit is an open-source publishing engine for DITA xml contents.\r\n\r\n* [www.dita-ot.org](http://www.dita-ot.org/)\r\n\r\nYou must DITA-OT 3 or later so you can use markdown language.\r\n\r\n Version| Description| \r\n| ------------ | :-----------: | \r\n| dita-ot-3.6.0     | DITA Open Tool Kit version 3.6.0 |\r\n[DITA OT Version]"
   },
   {
     "id": "18",
@@ -365,7 +365,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "For cm_app.rb, set the following variables to match your set up:\r\n```\r\n@sinatra_dir=\"/home/eric/sinatra_md1\"\r\n@ditaot_dir=\"/home/eric/dita-ot-3.0.1\"\r\n@java_dir=\"/usr/lib/jdk1.7.0_45\"\r\n```\r\nor\r\n\r\n```\r\n@sinatra_dir=\"/home/eric/sinatra_md1\"\r\n@ditaot_dir=\"/home/eric/dita-ot-3.0.1\"\r\n@java_dir=\"/usr/lib/jdk1.7.0_45\"\r\n```\r\n\r\nTo set categories, add the different categories for the following variable:\r\n```\r\ncat_out=\"<option value=\\\"form\\\">Form</option>\r\n  <option value=\\\"athlete\\\">Favorite Atheletes</option>\r\n  <option value=\\\"movies\\\">Favorite Movies</option>\r\n  <option value=\\\"recent_movies\\\">Recently Viewed Movies</option>\r\n  <option value=\\\"topicmap\\\">Topicmap</option>\r\n  <option value=\\\"bookmap\\\">Bookmap</option>\r\n  <option value=\\\"images\\\">Images</option>\r\n  <option value=\\\"cm\\\">Content Management</option>\r\n  <option value=\\\"misc\\\">Misc</option>\r\n  <option value=\\\"baseball\\\">Favorite Baseball Players</option>\"\r\n```\r\netc"
+    "content": "For cm_app.rb, set the following variables in the settings.json file to match your set up:\r\n\r\n```\r\n[\r\n  {\r\n    \"sinatra_dir\": \"/home/eric/dev/sinatra_json1\",\r\n    \"ditaot_dir\": \"/home/eric/dita-ot-3.6/docsrc\",\r\n    \"java_dir\": \"/usr/lib/jvm/java-1.21.0-openjdk-amd64\",\r\n    \"cat_out\": \"<option value='form'>Form</option>\\n <option value='topicmap'>Topicmap</option>\\n <option value='bookmap'>Bookmap</option>\\n <option value='images'>Images</option> \\n<option value='cm'>Content Management</option>\\n <option value='misc'>Misc</option>\\n <option value='athlete'>Favorite Atheletes</option>\\n <option value='movies'>Favorite Movies</option>\\n <option value='recent_movies'>Recently Viewed Movies</option>\\n <option value='baseball'>Favorite Baseball Players</option>\",\r\n    \"cat_out2\": \"<option value='inactive'>Inactive</option>\\n <option value='front'>Promote to front</option>\",\r\n    \"cat_out3\": \"<option value='title'>Title</option>\\n <option value='content'>Content</option>\\n <option value='cat_1'>Category 1</option>\\n <option value='cat_2'>Category 2</option>\"\r\n  }\r\n]\r\n```"
   },
   {
     "id": "20",
@@ -388,7 +388,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "The Home page is divided into two columns. The first column shows topics that are tagged promote to front. The second columns shows topics associated with a category in list form.\r\n\r\n![Home Page](images/home.png \"Home Page\")\r\n\r\nAdd the following code to the *display_front.erb* view to view all of the topics associated with a category (in this case *Favorite Movies*):\r\n\r\n```\r\n<div id=\"menu\" style=\"background-color:WhiteSmoke;width:325px;border:2px solid;border-radius:5px;font-size:12px;\">\r\n <h3>Favorite Movies</h3>\r\n<ol>\r\n<%\r\n#@dita = Dita.all(:order => :id.desc)\r\n#id_val = 2\r\n@dita = Dita.all(:category1 => \"movies\")\r\n@dita.each do |var|\r\n%>\r\n<li><a href=\"display_entry?id_val=<%= var.id %>\"><%= var.title %></a>: <%= var.short_desc %></li>\r\n<% end %>\r\n </ul> </div>\r\n```"
+    "content": "The Home page is divided into two columns. The first column shows topics that are tagged promote to front. The second columns shows topics associated with a category in list form.\r\n\r\n![Home Page](images/home.png \"Home Page\")\r\n\r\nAdd the following code to the *display_front.erb* view to view all of the topics associated with a category (in this case *Favorite Movies*):\r\n\r\n```\r\n<div id=\"menu\" style=\"background-color:WhiteSmoke;width:325px;border:2px solid;border-radius:5px;font-size:12px;\">\r\n <h3>Favorite Movies</h3>\r\n<ol>\r\n<%\r\n@data.each do |var|\r\n\tif var['category1'] =~/movies/\r\n%>\r\n<li><a href=\"htm/<%= var['form_name'] %>.htm\"><%= var['title'] %></a>: <%= var['short_desc'] %></li>\r\n<% \r\n end \r\nend\r\n%>\r\n </ul> </div>\r\n```"
   },
   {
     "id": "21",
@@ -457,7 +457,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "Forms are used to group topics together. These groupings are called categories. For example, you can create a form for your favorite baseball players, which this example will show. There are also the following pre-made forms:\r\n* athlete (Favorite Althelete)\r\n* movies (Favorite Movies)\r\n* recent_movies (Recent Movies)\r\n* topicmap (Topicmaps)\r\n* bookmap (Bookmaps)\r\n* images (Images)\r\n* cm (Content Management - this PDF file was generated using this form)\r\n\r\nA template has been setup for creating forms. You just need to enter information to identify the form fields. Perform the following steps to create a form:\r\n\r\n1. Select **Forms > Enter Forms**.\r\n2. Enter information to create form and identify the fields. See screen capture below for an example.\r\n3. Click submit.\r\n4. To add a form as a category, update the cat_out variable in the cm_app.rb file. See [Setting Variables](cm_set_variables.md)\r\n for more information. In this example, add`<option value=\\\"baseball\\\">Favorite Baseball Players</option>` to cm_app.rb file.\r\n\r\n```\r\ncat_out=\"<option value=\\\"form\\\">Form</option>\r\n  <option value=\\\"athlete\\\">Favorite Atheletes</option>\r\n  <option value=\\\"movies\\\">Favorite Movies</option>\r\n  <option value=\\\"movies\\\">Favorite Movies</option>\r\n  <option value=\\\"recent_movies\\\">Recently Viewed Movies</option>\r\n  <option value=\\\"topicmap\\\">Topicmap</option>\r\n  <option value=\\\"bookmap\\\">Bookmap</option>\r\n    <option value=\\\"images\\\">Images</option>\r\n  <option value=\\\"cm\\\">Content Management</option>\r\n  <option value=\\\"misc\\\">Misc</option>\r\n  <option value=\\\"baseball\\\">Favorite Baseball Players</option>\"\r\n```\r\n\r\n![create_form](images/Screenshot_create_form.png \"Create Form\")"
+    "content": "Forms are used to group topics together. These groupings are called categories. For example, you can create a form for your favorite baseball players, which this example will show. There are also the following pre-made forms:\r\n* athlete (Favorite Althelete)\r\n* movies (Favorite Movies)\r\n* recent_movies (Recent Movies)\r\n* topicmap (Topicmaps)\r\n* bookmap (Bookmaps)\r\n* images (Images)\r\n* cm (Content Management - this PDF file was generated using this form)\r\n\r\nA template has been setup for creating forms. You just need to enter information to identify the form fields. Perform the following steps to create a form:\r\n\r\n1. Select **Forms > Enter Forms**.\r\n2. Enter information to create form and identify the fields. See screen capture below for an example.\r\n3. Click submit.\r\n4. To add a form as a category, update the cat_out variable in the cm_app.rb file. See [Setting Variables](cm_set_variables.md)\r\n for more information. In this example, add`<option value=\\\"baseball\\\">Favorite Baseball Players</option>` to settings.json file.\r\n\r\n```\r\n\"cat_out\": \"<option value='form'>Form</option>\\n <option value='topicmap'>Topicmap</option>\\n <option value='bookmap'>Bookmap</option>\\n <option value='images'>Images</option> \\n<option value='cm'>Content Management</option>\\n <option value='misc'>Misc</option>\\n <option value='athlete'>Favorite Atheletes</option>\\n <option value='movies'>Favorite Movies</option>\\n <option value='recent_movies'>Recently Viewed Movies</option>\\n <option value='baseball'>Favorite Baseball Players</option>\",\r\n```\r\n\r\n![create_form](images/Screenshot_create_form.png \"Create Form\")"
   },
   {
     "id": "24",
@@ -531,8 +531,8 @@
   {
     "id": "27",
     "form_name": "cm_run_dita_3_0",
-    "title": "Running DITA OT 3.0",
-    "short_desc": "Running DITA OT 3.0",
+    "title": "Running DITA OT x.x.x",
+    "short_desc": "Running DITA OT x.x.x",
     "text1n": "Author",
     "text2n": "Date Created",
     "text3n": "Date Updated",
@@ -549,7 +549,7 @@
     "file2": "",
     "category1": "cm",
     "category2": "inactive",
-    "content": "The SWCMS saves the DITA and markdown files in the <DITA_OT_DIR>/samples/topics directory. The bookmap files are stored one level above: <DITA_OT_DIR>/samples.\r\n\r\nRun the following command to create a PDF file:\r\n```\r\n ../bin/dita --input=bookmap_ditacms.ditamap --format=pdf --output=out\r\n```\r\nRun the following command to create a HTML file:\r\n```\r\n ../bin/dita --input=topic_map_cms.ditamap --format=xhtml --output=out\r\n```\r\n\r\nNote: This example assumes that you have already created a bookmap.\r\n\r\nRun the following file to create an HTML file:\r\n\r\n```\r\n../bin/dita --input=topicmap_ditacms.ditamap --format=xhtml --output=out1\r\n```\r\n\r\nThe following are possible formats to use with DITA OT 3.xx:\r\n\r\n* dita \r\n* eclipsehelp \r\n* html5 \r\n* htmlhelp \r\n* markdown, markdown_gitbook, and markdown_github \r\n* pdf \r\n* tocjs \r\n* troff \r\n* xhtml\r\n\r\nRefer to [External](https://www.dita-ot.org/3.0/topics/build-using-dita-command.html) for further details.\r\n\r\n"
+    "content": "The SWCMS saves the DITA and markdown files in the <DITA_OT_DIR>/samples/topics directory. The bookmap files are stored one level above: <DITA_OT_DIR>/samples.\r\n\r\nRun the following command to create a PDF file:\r\n```\r\n ../bin/dita --input=cm_bookmap.ditamap --format=pdf --output=out\r\n```\r\nRun the following command to create a HTML file:\r\n```\r\n ../bin/dita --input=topic_map_cms.ditamap --format=xhtml --output=out\r\n```\r\n\r\nNote: This example assumes that you have already created a bookmap.\r\n\r\nRun the following file to create an HTML file:\r\n\r\n```\r\n../bin/dita --input=topicmap_ditacms.ditamap --format=xhtml --output=out1\r\n```\r\n\r\nThe following are possible formats to use with DITA OT x.x.x:\r\n\r\n* dita\r\n* eclipsehelp\r\n* html5\r\n* htmlhelp\r\n* markdown, markdown_gitbook, and markdown_github\r\n* pdf\r\n* xhtml\r\n\r\nRefer to [External](https://www.dita-ot.org/4.4/topics/build-using-dita-command) for further details.\r\n\r\n"
   },
   {
     "id": "28",
@@ -662,8 +662,54 @@
     "text5": "",
     "file1": "",
     "file2": "",
-    "category1": "form",
+    "category1": "baseball",
     "category2": "inactive",
     "content": "images/schmidt.jpg<br><img src=\"images/schmidt.jpg\">"
+  },
+  {
+    "id": "33",
+    "form_name": "cm_json",
+    "title": "Json File",
+    "short_desc": "Json File",
+    "text1n": "Author",
+    "text2n": "Date Created",
+    "text3n": "Date Updated",
+    "text4n": "",
+    "text5n": "",
+    "file1n": "File 1",
+    "file2n": "File 2",
+    "text1": "",
+    "text2": "",
+    "text3": "",
+    "text4": "",
+    "text5": "",
+    "file1": "",
+    "file2": "",
+    "category1": "cm",
+    "category2": "inactive",
+    "content": " A JSON file (.json) is a lightweight, text-based file format used to store data. It is easy to parse with key/value pairs and can be used with web applications. I chose json file for this application because of its ease of use, and I could reuse a lot of the code that interfaced with datamapper."
+  },
+  {
+    "id": "34",
+    "form_name": "cm_search",
+    "title": "Using Search Query",
+    "short_desc": "Search Query",
+    "text1n": "Author",
+    "text2n": "Date Created",
+    "text3n": "Date Updated",
+    "text4n": "",
+    "text5n": "",
+    "file1n": "File 1",
+    "file2n": "File 2",
+    "text1": "",
+    "text2": "",
+    "text3": "",
+    "text4": "",
+    "text5": "",
+    "file1": "",
+    "file2": "",
+    "category1": "cm",
+    "category2": "inactive",
+    "content": "You can perform a search by clicking on the Search button in the upper right-hand corner of the web page. The Search allows you to search by the following:\r\n\r\n* Title\r\n* Content\r\n* Category 1\r\n* Category 2"
   }
 ]
