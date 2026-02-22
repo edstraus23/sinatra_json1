@@ -37,9 +37,6 @@ end
  <h3>Favorite Movies</h3>
 <ol>
 <%
-#@dita = Dita.all(:order => :id.desc)
-#id_val = 2
-#@dita = Dita.all(:category1 => "movies")
 @data.each do |var|
 	if var['category1'] =~/movies/
 %>
